@@ -34,5 +34,6 @@
 # 编辑器配置
 *.json
 
-# jupyter-notebook
+# jupyter-notebook check point
 .ipynb_checkpoints
+*/.ipynb_checkpoints/*
