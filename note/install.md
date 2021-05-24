@@ -10,3 +10,4 @@
   * wget https://zh-v2.d2l.ai/d2l-zh.zip
   * unzip d2l-zh.zip
   * jupyter notebook
+
