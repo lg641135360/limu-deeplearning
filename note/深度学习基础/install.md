@@ -11,3 +11,5 @@
   * unzip d2l-zh.zip
   * jupyter notebook
 
+.
+
