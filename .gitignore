@@ -1,4 +1,4 @@
-# Prerequisites
+﻿# Prerequisites
 *.d
 
 # Compiled Object files
@@ -37,3 +37,7 @@
 # jupyter-notebook check point
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+
+# idea
+.idea
+*/.idea/*
