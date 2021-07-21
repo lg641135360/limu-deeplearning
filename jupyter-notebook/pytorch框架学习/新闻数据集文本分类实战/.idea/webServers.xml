@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="635771fa-4d99-4af3-8e41-496bb314cbd2" name="deep08" url="http://127.0.0.1:9711/lab?token=a8a868fe3e1295052bbb40bd9a9ff5c280a310bd6ebaced6">
+        <fileTransfer accessType="LOCAL" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
