@@ -7,14 +7,15 @@
 2. 基于官方的anaconda3镜像实例化一个本地容器
 
    1. ```bash
-      docker run -it --gpus all --name rikoo_py38 -p 9711:9711 -v `pwd`:/root -e NVIDIA_DRIVER_CAPABILITIES=compute,utility -e NVIDIA_VISIBLE_DEVICES=all continuumio/anaconda3 /bin/bash
+      docker run -it --gpus all --name rikoo_py38 --ipc=host -p 9711:9711 -v `pwd`:/root -e NVIDIA_DRIVER_CAPABILITIES=compute,utility -e NVIDIA_VISIBLE_DEVICES=all continuumio/anaconda3 /bin/bash
       ```
 
       1. --name：容器名称
       2. -p 8888:8888：将容器的8888端口映射到本地的8888端口，便于访问jupyter
       3. -it：用交互的方式打开容器
       4. -v 将宿主机当前目录pwd挂载到容器内/root目录，容器内对/root进行操作会同步到宿主机
-      5. 其他参数是为了在容器内使用英伟达显卡驱动
+      5. --ipc=host 与宿主机共享内存
+      6. 其他参数是为了在容器内使用英伟达显卡驱动
 
 3. 更换源
 
@@ -30,25 +31,13 @@
       1. ```bash
          vim /etc/apt/sources.list
          
-         # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
-         deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
-         # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
-         deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-         # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-         deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-         # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-         deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-         # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
          
-         # 预发布软件源，不建议启用
-         # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
-         # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
          
          # 更新源
          apt-get update 
          apt-get upgrade
          ```
-
+   
 4. 更改conda源
 
    1. ```bash
