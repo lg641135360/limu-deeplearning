@@ -4,7 +4,9 @@
   * CNN
   * RNN
     * [RNN理解](./note/深度学习基础/各种网络/RNN/RNN理解.md)
-
+    * [RNN实现](./note/深度学习基础/各种网络/RNN/RNN实现.md)
+    * [RNN学习](./note/深度学习基础/各种网络/RNN/RNN学习.md)
+  
 * 深度学习基础
   * [DeepLearning实质](./note/深度学习基础/1_深入学习.md)
   * [梯度下降](./note/深度学习基础/2_梯度下降_神经网络学习.md)
