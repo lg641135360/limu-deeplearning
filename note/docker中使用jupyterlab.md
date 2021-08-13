@@ -7,11 +7,12 @@
 2. 基于官方的anaconda3镜像实例化一个本地容器
 
    1. ```bash
-      docker run -it --gpus all --name rikoo_py38 --ipc=host -p 9711:9711 -v `pwd`:/root -e NVIDIA_DRIVER_CAPABILITIES=compute,utility -e NVIDIA_VISIBLE_DEVICES=all continuumio/anaconda3 /bin/bash
+      docker run -it --gpus all --name rikoo_py38 --ipc=host -p 9711:9711 -p 9712:9712 -p 9722:22 -v `pwd`:/root -e NVIDIA_DRIVER_CAPABILITIES=compute,utility -e NVIDIA_VISIBLE_DEVICES=all continuumio/anaconda3 /bin/bash
       ```
 
       1. --name：容器名称
       2. -p 8888:8888：将容器的8888端口映射到本地的8888端口，便于访问jupyter
+         1. 这里把docker容器内的`22`端口映射出来，方便登录这个容器的`ssh`通道
       3. -it：用交互的方式打开容器
       4. -v 将宿主机当前目录pwd挂载到容器内/root目录，容器内对/root进行操作会同步到宿主机
       5. --ipc=host 与宿主机共享内存
