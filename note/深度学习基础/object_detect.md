@@ -1,4 +1,4 @@
-> ![image-20211020202446616](/home/a415_10/.config/Typora/typora-user-images/image-20211020202446616.png)
+> ![image-20211020203847023](object_detect.assets/image-20211020203847023.png)
 >
 > 图像分类：在一个图片中将**一个实体**找出来
 >
@@ -11,7 +11,7 @@
 * 4个数字定义
   * (左上x,左上y,右下x,右下y)
   * (左上x,左上y,宽,高)
-  * ![image-20211020202915002](/home/a415_10/.config/Typora/typora-user-images/image-20211020202915002.png)
+  * ![image-20211020203858561](object_detect.assets/image-20211020203858561.png)
 
 ##### 数据集
 
@@ -25,3 +25,6 @@
 * 物体检测识别图片中多个物体的类别和位置
 * 位置通常用边缘框表示
 
+> 实现
+>
+> 
