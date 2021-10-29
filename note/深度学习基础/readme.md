@@ -32,5 +32,7 @@
 * 其他任务
   * [目标检测](./object_detect.md)
     * [锚框](./anchor.md)
-    * 
+    * [常用算法`_R-CNNs`](./rcnns.md)
+    * [单发多框检测`SSD`](./ssds.md)
+    * [`YOLO`](./yolo.md)
 
