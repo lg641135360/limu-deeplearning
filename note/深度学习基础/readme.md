@@ -35,4 +35,5 @@
     * [常用算法`_R-CNNs`](./rcnns.md)
     * [单发多框检测`SSD`](./ssds.md)
     * [`YOLO`](./yolo.md)
+  * [语义分割](./Semantic_segmentation.md)
 
