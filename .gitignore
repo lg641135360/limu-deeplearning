@@ -44,3 +44,18 @@
 
 # .DS_store
 *.DS_store
+
+# zip
+*.zip
+*.gz
+
+# model
+*.pth
+
+# data_batch
+data_batch*
+*.meta
+*_batch
+
+# tensorboard logs
+events.out.tfevents*
