@@ -35,3 +35,4 @@
     
 ## `pytorch`学习
 * [pytorch](./learn_torch/readme.md)
+* [目标检测](./object_detect/readme.md)
